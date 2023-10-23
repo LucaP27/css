@@ -1,40 +1,108 @@
 body {
-	width: 60em;
-	margin: 0 auto;
+	background-color: rgb(19, 19, 34);
+}
+#hamburger {
+	display: none;
+	height: 60px;
+	width: 60px;
+	margin: 5px;
 }
 
-section {
-	padding: 2em;
-	margin: 1em;
+#svg-version {
+	display: none;
+	height: 60px;
+	width: 60px;
+	margin: 5px;
 }
 
-#green {
-	background-color: #8ffda7;
-}
-
-#orange {
-	background-color: #ffc788;
-}
-
-#yellow {
-	background-color: #ffff92;
-}
-
-#red {
-	background-color: #ff919c;
-}
-
-#blue {
-	background-color: #98d2ff;
+nav {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: rgb(52, 33, 120);
+	height: 60px;
+	border-bottom: 1px solid white;
+	display: flex;
+	align-items: center;
 }
 
 ul {
-	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: white;
+	list-style-type: none;
 }
 
-li {
-	background-color: white;
-	padding: 1em;
-	display: block;
-	margin: 1em;
+a {
+	color: white;
+	text-decoration: none;
+}
+
+ul li:first-child a {
+	font-size: 1.2em;
+}
+
+ul li:nth-child(3) a {
+	color: lightgray;
+}
+
+select {
+	background-color: rgb(29, 27, 36);
+	border: none;
+	color: lightgray;
+	font-size: 1em;
+}
+
+ul li:nth-child(5) a {
+	color: grey;
+	padding-right: 30px;
+}
+
+input {
+	height: 3em;
+	border: solid white;
+	border-radius: 5px;
+}
+
+button {
+	height: 3rem;
+	border: 0.5px solid green;
+	border-radius: 5px;
+	color: green;
+	background-color: black;
+}
+
+button:hover {
+	background-color: green;
+	color: white;
+}
+
+@media (max-width: 768px) {
+	nav ul {
+		display: none;
+	}
+
+	#hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+	}
+  
+	.line {
+		height: 10px;
+		width: 80%;
+		background-color: white;
+		border-radius: 5px;
+	}
+
+	#svg-version {
+		display: block;
+	}
+
+	#svg-version img {
+		height: 60px;
+		width: 60px;
+	}
 }
